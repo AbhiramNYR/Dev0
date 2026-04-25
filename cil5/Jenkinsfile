@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build & Push') {
+            steps {
+                sh 'docker build -t aswin1079/app5:latest .'
+                sh 'docker push aswin1079/app5:latest'
+            }
+        }
+    }
+}
